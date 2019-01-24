@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sample_tab_view"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/tab_view"/>
+        <item
+            android:id="@+id/rec_sam"
+            android:icon="@android:drawable/ic_menu_rotate"
+            android:title="@string/rec_sam" />
+        <item
+            android:id="@+id/frag_sam"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/frag_sam" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/index"
+            android:title="@string/home_screen" />
+    </group>
+
+</menu>

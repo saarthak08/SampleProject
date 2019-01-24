@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#edfb6d"
+        android:padding="@dimen/dimen_32x"
+        android:paddingLeft="@dimen/dimen_8x"
+        android:paddingTop="@dimen/dimen_8x"
+        android:paddingRight="@dimen/dimen_8x"
+        android:paddingBottom="@dimen/dimen_8x"
+        android:text="@string/main_fragment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:autoSizeTextType="uniform"
+        app:fontFamily="casual" />
+
+</FrameLayout>
