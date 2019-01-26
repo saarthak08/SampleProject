@@ -17,6 +17,11 @@
     <string name="tab1">Text</string>
     <string name="tab2">Resources</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="java">Java Code</string>
+    <string name="xml">XML Code</string>
+    <string name="transition_string">hello</string>
+    <string name="stackview">Stack View: Swipe down on the stack for popping the top image from the stack &amp; swipe up on the stack for pushing the previous popped image back to the stack.
+</string>
     <string name="tab1_text">This is an example of Tab View implemented via Fragments, FragmentPagerAdapter and ViewPager.</string>
     <string name="main_fragment">This is a sample project of some concepts of the android. Tap the button on the left side of the toolbar to select any option from the navigation menu.</string>
 
