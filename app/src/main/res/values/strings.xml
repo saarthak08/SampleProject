@@ -20,10 +20,18 @@
     <string name="java">Java Code</string>
     <string name="xml">XML Code</string>
     <string name="transition_string">hello</string>
+    <string name="click_me">Click Me!</string>
+    <string name="samplemain">This is the example of Fragments. A Fragment represents a behavior or a portion of user interface in a FragmentActivity. You can combine multiple fragments in a single activity to build a multi-pane UI and reuse a fragment in multiple activities. You can think of a fragment as a modular section of an activity, which has its own lifecycle, receives its own input events, and which you can add or remove while the activity is running (sort of like a "sub activity" that you can reuse in different activities). Rotate the phone to landscape mode to view another fragment.</string>
     <string name="stackview">Stack View: Swipe down on the stack for popping the top image from the stack &amp; swipe up on the stack for pushing the previous popped image back to the stack.
 </string>
     <string name="tab1_text">This is an example of Tab View implemented via Fragments, FragmentPagerAdapter and ViewPager.</string>
     <string name="main_fragment">This is a sample project of some concepts of the android. Tap the button on the left side of the toolbar to select any option from the navigation menu.</string>
+    <string name="title_activity_sample_fragment">SampleFragmentActivity</string>
+    <string name="buttonresources">Go to Resources</string>
+    <string name="landbutton">This is the landscape layout of the fragment. Infact, this whole app is build on the concept of fragments build for each navigation menu option &amp; then, nested fragments are used to further render views on the main activity screen.</string>
+    <string name="title_activity_image_view_grid">ImageViewGrid</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

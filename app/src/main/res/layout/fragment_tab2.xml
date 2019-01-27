@@ -12,30 +12,24 @@
         android:layout_height="wrap_content"
         android:baselineAligned="true"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/dimen_64x"
+        android:layout_marginBottom="25dp"
         android:orientation="horizontal">
 
         <StackView
-            android:id="@+id/stack_viewjava"
+            android:id="@+id/stack_viewjava1"
             android:layout_width="wrap_content"
-            android:layout_weight="2"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:animateLayoutChanges="true"
-            android:animationCache="true">
-        </StackView>
+            android:animationCache="true"></StackView>
+
         <StackView
-            android:id="@+id/stack_viewxml"
+            android:id="@+id/stack_viewxml1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:animateLayoutChanges="true"
-            android:animationCache="true"
-            android:focusable="true">
-        </StackView>
-
-
-
-    </LinearLayout>
+            android:animationCache="true"></StackView>    </LinearLayout>
 
     <TextView
         android:id="@+id/textView4"
@@ -47,6 +41,9 @@
         android:textColor="@android:color/background_dark"
         android:textStyle="italic"
         app:fontFamily="serif"></TextView>
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

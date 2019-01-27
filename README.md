@@ -3,3 +3,4 @@
     
 FEATURES:
     1) Tab View
+    2) Fragments Sample

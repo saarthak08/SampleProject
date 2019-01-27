@@ -19,7 +19,8 @@ public class ImageViewActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_image_view);
         ZoomageView zoomageView=findViewById(R.id.myZoomageView);
-        String s=Tab2Fragment.filename;
+        Bundle bundle=getIntent().getExtras();
+        String s= bundle.getString("filename");
         int resId=this.getResources().getIdentifier(s,"drawable",this.getPackageName());
         zoomageView.setImageResource(resId);
     }

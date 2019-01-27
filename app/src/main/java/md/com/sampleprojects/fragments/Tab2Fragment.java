@@ -3,7 +3,9 @@ package md.com.sampleprojects.fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -20,6 +22,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.StackView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,6 +79,7 @@ public class Tab2Fragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        setRetainInstance(true);
     }
 
     @Override
@@ -88,10 +93,10 @@ public class Tab2Fragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         StackView stackViewjava, stackViewxml;
-        stackViewjava = getActivity().findViewById(R.id.stack_viewjava);
+        stackViewjava = getActivity().findViewById(R.id.stack_viewjava1);
         stackViewjava.setInAnimation(getContext(), android.R.animator.fade_in);
         stackViewjava.setOutAnimation(getContext(), android.R.animator.fade_out);
-        stackViewxml = getActivity().findViewById(R.id.stack_viewxml);
+        stackViewxml = getActivity().findViewById(R.id.stack_viewxml1);
         stackViewxml.setInAnimation(getContext(), android.R.animator.fade_in);
         stackViewxml.setOutAnimation(getContext(), android.R.animator.fade_out);
         final StackViewAdapter stackViewAdapterjava = new StackViewAdapter(getContext(), R.layout.item, getStoresJava());
@@ -103,6 +108,7 @@ public class Tab2Fragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity(), ImageViewActivity.class);
                 filename=stackViewAdapterjava.storeLists.get(position);
+                intent.putExtra("filename",filename);
                 startActivity(intent);
             }
         });
@@ -111,6 +117,7 @@ public class Tab2Fragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity(), ImageViewActivity.class);
                 filename=stackViewAdapterxml.storeLists.get(position);
+                intent.putExtra("filename",filename);
                 startActivity(intent);
             }
         });
@@ -120,6 +127,10 @@ public class Tab2Fragment extends Fragment {
         ArrayList<String> stores = new ArrayList<String>();
         stores.add("tabview1java");
         stores.add("tabview2java");
+        stores.add("tabview3java");
+        stores.add("tabview4java");
+        stores.add("tabview5java");
+        stores.add("tabview6java");
         return stores;
     }
 
@@ -128,14 +139,17 @@ public class Tab2Fragment extends Fragment {
         stores.add("tabviewxml1");
         stores.add("tabviewxml2");
         stores.add("tabviewxml3");
+        stores.add("tabviewxml4");
+        stores.add("tabviewxml5");
+        stores.add("tabviewxml6");
+        stores.add("tabviewxml7");
+        stores.add("tabviewxml8");
         return stores;
     }
-
     class StackViewAdapter extends ArrayAdapter {
         public  ArrayList<String> storeLists;
         private Context context;
         private int itemLayout;
-
         public StackViewAdapter(@androidx.annotation.NonNull Context ctx, int resource, @androidx.annotation.NonNull ArrayList<String> objects) {
             super(ctx, resource, objects);
             storeLists= objects;
@@ -160,8 +174,9 @@ public class Tab2Fragment extends Fragment {
                 view=LayoutInflater.from(parent.getContext()).inflate(itemLayout,parent,false);
             }
             String store=storeLists.get(position);
-            ImageView imageView=(ImageView)view.findViewById(R.id.imageViewjava);
+            ImageView imageView=view.findViewById(R.id.imageViewjava);
             int resId=context.getResources().getIdentifier(store,"drawable",context.getPackageName());
+            Glide.with(getContext()).load(resId).into(imageView);
             imageView.setImageResource(resId);
             return view;
         }
