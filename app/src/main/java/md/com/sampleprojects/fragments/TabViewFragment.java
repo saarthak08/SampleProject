@@ -1,6 +1,7 @@
 package md.com.sampleprojects.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabItem;
@@ -69,16 +70,16 @@ public class TabViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_tab_view, container, false);
-    }
 
+    }
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
         final TabLayout tabLayout=getActivity().findViewById(R.id.tabs);
         ViewPager viewPager=getActivity().findViewById(R.id.view_pager);
-        CustomPagerAdapter customPagerAdapter=new CustomPagerAdapter(getActivity().getSupportFragmentManager());
+        CustomPagerAdapter customPagerAdapter=new CustomPagerAdapter(getChildFragmentManager());
         customPagerAdapter.addFragment(new Tab1Fragment(),"Text");
         customPagerAdapter.addFragment(new Tab2Fragment(),"Resources");
         viewPager.setAdapter(customPagerAdapter);
@@ -113,3 +114,4 @@ class CustomPagerAdapter extends FragmentPagerAdapter {
         return mStrings.get(position);
     }
 }
+

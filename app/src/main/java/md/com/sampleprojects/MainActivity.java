@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,6 +26,10 @@ import md.com.sampleprojects.fragments.TabViewFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public boolean doubleBackToExitPressedOnce=false;
+    private String TAG_1="1";
+    private String TAG_2="2";
+    private String TAG_3="3";
+    private String TAG_4="4";
     public FrameLayout frameLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.getMenu().getItem(0).setChecked(false);
         navigationView.getMenu().getItem(3).setChecked(true);
         frameLayout=findViewById(R.id.frame_layout);
-        getSupportFragmentManager().beginTransaction().add(R.id.frame_layout,new MainFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new MainFragment()).commit();
     }
 
     @Override
@@ -89,17 +96,18 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        FragmentManager fragmentManager=getSupportFragmentManager();
         frameLayout=findViewById(R.id.frame_layout);
         int id = item.getItemId();
 
         if (id == R.id.sample_tab_view) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new TabViewFragment()).commit();
+                fragmentManager.beginTransaction().replace(R.id.frame_layout,new TabViewFragment()).commit();
         } else if (id == R.id.rec_sam) {
         }
         else if(id==R.id.frag_sam){
         }
         else if(id==R.id.home){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new MainFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame_layout,new MainFragment()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
