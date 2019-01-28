@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008</color>
     <color name="colorPrimaryDark">#139</color>
     <color name="colorAccent">#c11414</color>
+    <color name="gradient_1_start">#c471f5</color>
+    <color name="gradient_1_end">#fa71cd</color>
+    <color name="gradient_2_start">#88d3ce</color>
+    <color name="gradient_2_end">#6e45e2</color>
+    <color name="gradient_3_start">#84fab0</color>
+    <color name="gradient_3_end">#8fd3f4</color>
+    <color name="gradient_4_start">#89f7fe</color>
+    <color name="gradient_4_end">#66a6ff</color>
 </resources>

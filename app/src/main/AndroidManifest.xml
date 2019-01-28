@@ -29,7 +29,8 @@
         <activity
             android:name=".ImageViewGrid"
             android:label="@string/title_activity_image_view_grid"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RecyclerResourcesActivity"></activity>
     </application>
 
 </manifest>

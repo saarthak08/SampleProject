@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#608363"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<FrameLayout
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent"
+    android:background="#608363"
+    android:layout_width="match_parent"
+    tools:context=".fragments.RecyclerViewMainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/buttonx"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="@dimen/dimen_8x"
+        android:background="#c3a981"
+        android:fadingEdge="horizontal|vertical"
+        android:foreground="?attr/selectableItemBackground"
+        android:requiresFadingEdge="horizontal|vertical"
+        android:text="@string/add" />
+
+    <Button
+        android:id="@+id/buttony"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="8dp"
+        android:background="#c3a981"
+        android:fadingEdge="horizontal|vertical"
+        android:foreground="?attr/selectableItemBackground"
+        android:requiresFadingEdge="horizontal|vertical"
+        android:text="@string/buttonresources" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="@string/menu"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="cursive" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="104dp" />
+
+</FrameLayout>
+    </android.support.v4.widget.NestedScrollView>

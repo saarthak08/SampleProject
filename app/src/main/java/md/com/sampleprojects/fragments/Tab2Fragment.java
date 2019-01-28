@@ -146,11 +146,11 @@ public class Tab2Fragment extends Fragment {
         stores.add("tabviewxml8");
         return stores;
     }
-    class StackViewAdapter extends ArrayAdapter {
+    public static class StackViewAdapter extends ArrayAdapter {
         public  ArrayList<String> storeLists;
         private Context context;
         private int itemLayout;
-        public StackViewAdapter(@androidx.annotation.NonNull Context ctx, int resource, @androidx.annotation.NonNull ArrayList<String> objects) {
+        public StackViewAdapter( Context ctx, int resource, ArrayList<String> objects) {
             super(ctx, resource, objects);
             storeLists= objects;
             context=ctx;

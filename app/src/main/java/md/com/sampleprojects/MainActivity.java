@@ -17,6 +17,7 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import md.com.sampleprojects.fragments.MainFragment;
+import md.com.sampleprojects.fragments.RecyclerViewFragment;
 import md.com.sampleprojects.fragments.SampleMainFragment;
 import md.com.sampleprojects.fragments.TabViewFragment;
 
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.sample_tab_view) {
                 fragmentManager.beginTransaction().replace(R.id.frame_layout,new TabViewFragment()).commit();
         } else if (id == R.id.rec_sam) {
-
+            fragmentManager.beginTransaction().replace(R.id.frame_layout,new RecyclerViewFragment()).commit();
         }
         else if(id==R.id.frag_sam){
             fragmentManager.beginTransaction().replace(R.id.frame_layout,new SampleMainFragment()).commit();

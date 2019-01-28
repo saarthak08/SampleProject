@@ -32,6 +32,10 @@
     <string name="title_activity_image_view_grid">ImageViewGrid</string>
     <string name="one">1</string>
     <string name="two">2</string>
+    <string name="Recycler_view">Go to Recycler View</string>
+    <string name="add">Add a menu item to Recycler View</string>
+    <string name="recinfo">Recycler View info</string>
+    <string name="rec_info">RecyclerView is an advanced and flexible version of ListView and GridView. It is a container used for displaying large amount of data sets that can be scrolled very efficiently by maintaining a limited number of views. It is a dynamic UI. Go to our sample Recycler View by tapping \'Go to Recycler View\' button.Then, you can dynamically add items to our sample Recycler View by tapping on \'Add a menu item to Recycler View\' button".</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

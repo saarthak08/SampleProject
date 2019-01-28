@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#608363"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#608363"
+        tools:context=".fragments.RecyclerViewFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:background="#8885c4"
+            android:fadingEdge="horizontal|vertical"
+            android:foreground="?attr/selectableItemBackground"
+            android:requiresFadingEdge="horizontal|vertical"
+            android:text="@string/Recycler_view" />
+
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="604dp"
+            android:layout_marginTop="48dp"
+            android:background="#608363">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gradient_4_end"
+                android:padding="@dimen/dimen_32x"
+                android:paddingLeft="@dimen/dimen_8x"
+                android:paddingTop="@dimen/dimen_8x"
+                android:paddingRight="@dimen/dimen_8x"
+                android:paddingBottom="@dimen/dimen_8x"
+                android:text="@string/rec_info"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:autoSizeTextType="uniform"
+                app:fontFamily="casual" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+</android.support.v4.widget.NestedScrollView>
