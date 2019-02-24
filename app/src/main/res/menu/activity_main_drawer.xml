@@ -16,6 +16,10 @@
             android:id="@+id/frag_sam"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/frag_sam" />
+        <item
+            android:id="@+id/Dagger"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Dagger 2/ MVP Sample"/>
     </group>
     <group android:checkableBehavior="single"
         android:id="@+id/group1">

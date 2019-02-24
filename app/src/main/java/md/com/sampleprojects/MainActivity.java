@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import md.com.sampleprojects.fragments.DaggerFragment;
 import md.com.sampleprojects.fragments.MainFragment;
 import md.com.sampleprojects.fragments.RecyclerViewFragment;
 import md.com.sampleprojects.fragments.SampleMainFragment;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(false);
-        navigationView.getMenu().getItem(3).setChecked(true);
+        navigationView.getMenu().getItem(4).setChecked(true);
         frameLayout=findViewById(R.id.frame_layout);
     }
 
@@ -86,6 +87,10 @@ public class MainActivity extends AppCompatActivity
         }
         else if(id==R.id.frag_sam){
             fragmentManager.beginTransaction().replace(R.id.frame_layout,new SampleMainFragment()).commit();
+        }
+        else if(id==R.id.Dagger)
+        {
+            fragmentManager.beginTransaction().replace(R.id.frame_layout,new DaggerFragment()).commit();
         }
         else if(id==R.id.home){
             fragmentManager.beginTransaction().replace(R.id.frame_layout,new MainFragment()).commit();
