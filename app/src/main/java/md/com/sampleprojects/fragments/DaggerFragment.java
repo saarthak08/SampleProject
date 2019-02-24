@@ -1,12 +1,25 @@
 package md.com.sampleprojects.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
+
+import javax.inject.Inject;
+
+import md.com.sampleprojects.DependencyInjection.DaggerApplication;
+import md.com.sampleprojects.DependencyInjection.DaggerComponent;
+import md.com.sampleprojects.DependencyInjection.DaggerModel;
 import md.com.sampleprojects.R;
 
 /**
@@ -24,7 +37,8 @@ public class DaggerFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-
+    @Inject
+    DaggerModel myString;
     public DaggerFragment() {
         // Required empty public constructor
     }
@@ -57,10 +71,39 @@ public class DaggerFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(Context context) {
+        ((DaggerApplication)context.getApplicationContext()).getComponent().inject(this);
+        super.onAttach(context);
+
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_dagger, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        final TextView textView=getActivity().findViewById(R.id.textViewDagger);
+        textView.setAlpha(0);
+        new MaterialDialog.Builder(getContext()).title("Enter any string:").input(null,null , false, new MaterialDialog.InputCallback() {
+            @Override
+            public void onInput(@NonNull MaterialDialog dialog, CharSequence input) {
+                myString.setMyString(input.toString());
+            }
+        }).canceledOnTouchOutside(false).onAny(new MaterialDialog.SingleButtonCallback() {
+            @Override
+            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                Toast.makeText(getContext(),"Dependency Injected",Toast.LENGTH_SHORT).show();
+                textView.animate().alpha(1).setDuration(Toast.LENGTH_LONG);
+                textView.setText("You entered "+ myString.getMyString());
+
+            }
+        }).show();
+
     }
 
 }

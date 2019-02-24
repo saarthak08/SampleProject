@@ -7,11 +7,6 @@ import javax.inject.Inject;
 public class DaggerModel {
     private String myString;
 
-    @Inject
-    public DaggerModel(String myString){
-        this.myString=myString;     //Model needs the injection
-    }
-
     public String getMyString() {
         return myString;
     }
