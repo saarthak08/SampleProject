@@ -3,6 +3,7 @@ package md.com.sampleprojects.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -88,6 +89,8 @@ public class DaggerFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         final TextView textView=getActivity().findViewById(R.id.textViewDagger);
+        final TextView textView2 =getActivity().findViewById(R.id.textView8);
+        textView2.setAlpha(0);
         textView.setAlpha(0);
         new MaterialDialog.Builder(getContext()).title("Enter any string:").input(null,null , false, new MaterialDialog.InputCallback() {
             @Override
@@ -100,6 +103,13 @@ public class DaggerFragment extends Fragment {
                 Toast.makeText(getContext(),"Dependency Injected",Toast.LENGTH_SHORT).show();
                 textView.animate().alpha(1).setDuration(Toast.LENGTH_LONG);
                 textView.setText("You entered "+ myString.getMyString());
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        textView2.animate().alpha(1).setDuration(2000);
+
+                    }
+                },2500);
 
             }
         }).show();

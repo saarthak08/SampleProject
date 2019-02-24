@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gradient_1_start"
     tools:context=".fragments.DaggerFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/textViewDagger"
         android:layout_width="match_parent"
+        android:layout_height="312dp"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:text="@string/hello_blank_fragment"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="312dp"
+        android:padding="16dp"
+        android:text="This is a simple Dagger-2 implemented code &amp; the string you entered was injected directly to this fragment via impkementation of Dagger-2."
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
 
 </FrameLayout>
