@@ -3,34 +3,22 @@ package md.com.sampleprojects.fragments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.StackView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
 
-import md.com.sampleprojects.ImageViewActivity;
-import md.com.sampleprojects.MainActivity;
+import md.com.sampleprojects.activities.ImageViewActivity;
 import md.com.sampleprojects.R;
 
 /**

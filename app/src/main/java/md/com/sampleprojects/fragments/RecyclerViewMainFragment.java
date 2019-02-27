@@ -17,7 +17,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import java.util.ArrayList;
 
 import md.com.sampleprojects.R;
-import md.com.sampleprojects.RecyclerResourcesActivity;
+import md.com.sampleprojects.activities.RecyclerResourcesActivity;
 import md.com.sampleprojects.adapter.TopicsAdapter;
 
 /**

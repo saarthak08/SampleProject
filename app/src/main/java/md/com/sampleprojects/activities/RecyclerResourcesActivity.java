@@ -1,4 +1,4 @@
-package md.com.sampleprojects;
+package md.com.sampleprojects.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +17,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import md.com.sampleprojects.fragments.Tab2Fragment;
+import md.com.sampleprojects.R;
 
 import static md.com.sampleprojects.fragments.Tab2Fragment.filename;
 

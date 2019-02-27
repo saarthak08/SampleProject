@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LauncherActivity"
+            android:name=".activities.LauncherActivity"
             android:noHistory="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -21,17 +21,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ImageViewActivity"
+            android:name=".activities.ImageViewActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ImageViewGrid"
+            android:name=".activities.ImageViewGrid"
             android:label="@string/title_activity_image_view_grid"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RecyclerResourcesActivity"></activity>
+        <activity android:name=".activities.RecyclerResourcesActivity"></activity>
     </application>
 
 </manifest>

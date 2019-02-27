@@ -1,4 +1,4 @@
-package md.com.sampleprojects;
+package md.com.sampleprojects.activities;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+import md.com.sampleprojects.R;
 
 public class LauncherActivity extends AppCompatActivity {
 

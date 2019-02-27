@@ -1,4 +1,4 @@
-package md.com.sampleprojects;
+package md.com.sampleprojects.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.jsibbold.zoomage.ZoomageView;
 
+import md.com.sampleprojects.R;
 import md.com.sampleprojects.fragments.Tab2Fragment;
 
 public class ImageViewActivity extends AppCompatActivity {

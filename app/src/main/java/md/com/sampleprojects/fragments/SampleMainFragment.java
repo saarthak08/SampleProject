@@ -2,22 +2,17 @@ package md.com.sampleprojects.fragments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
-import md.com.sampleprojects.ImageViewGrid;
+import md.com.sampleprojects.activities.ImageViewGrid;
 import md.com.sampleprojects.R;
 
 /**

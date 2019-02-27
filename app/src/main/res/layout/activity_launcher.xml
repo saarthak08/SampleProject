@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#abcd97"
-    tools:context=".LauncherActivity"
+    tools:context=".activities.LauncherActivity"
     tools:layout_editor_absoluteY="25dp">
 
     <TextView

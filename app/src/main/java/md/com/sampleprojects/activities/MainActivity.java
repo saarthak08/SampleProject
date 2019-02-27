@@ -1,4 +1,4 @@
-package md.com.sampleprojects;
+package md.com.sampleprojects.activities;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import md.com.sampleprojects.R;
 import md.com.sampleprojects.fragments.DaggerFragment;
 import md.com.sampleprojects.fragments.MainFragment;
 import md.com.sampleprojects.fragments.RecyclerViewFragment;
