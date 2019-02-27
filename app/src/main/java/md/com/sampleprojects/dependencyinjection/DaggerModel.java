@@ -1,8 +1,4 @@
-package md.com.sampleprojects.DependencyInjection;
-
-import android.widget.TextView;
-
-import javax.inject.Inject;
+package md.com.sampleprojects.dependencyinjection;
 
 public class DaggerModel {
     private String myString;

@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import md.com.sampleprojects.DependencyInjection.DaggerApplication;
 import md.com.sampleprojects.fragments.DaggerFragment;
 import md.com.sampleprojects.fragments.MainFragment;
 import md.com.sampleprojects.fragments.RecyclerViewFragment;

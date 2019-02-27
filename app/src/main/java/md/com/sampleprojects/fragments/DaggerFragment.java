@@ -18,9 +18,8 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import javax.inject.Inject;
 
-import md.com.sampleprojects.DependencyInjection.DaggerApplication;
-import md.com.sampleprojects.DependencyInjection.DaggerComponent;
-import md.com.sampleprojects.DependencyInjection.DaggerModel;
+import md.com.sampleprojects.dependencyinjection.DaggerApplication;
+import md.com.sampleprojects.dependencyinjection.DaggerModel;
 import md.com.sampleprojects.R;
 
 /**

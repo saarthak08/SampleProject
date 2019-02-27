@@ -1,4 +1,4 @@
-package md.com.sampleprojects.DependencyInjection;
+package md.com.sampleprojects.dependencyinjection;
 
 import android.app.Application;
 
@@ -7,7 +7,7 @@ public class DaggerApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        component=DaggerDaggerComponent.builder().daggerModule(new DaggerModule()).build();
+        component=DaggerDaggerComponent.builder().daggerModule(new DaggerModule(this)).build();
     }
 
 

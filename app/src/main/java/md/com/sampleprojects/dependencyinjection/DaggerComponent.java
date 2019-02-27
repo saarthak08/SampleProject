@@ -1,9 +1,8 @@
-package md.com.sampleprojects.DependencyInjection;
+package md.com.sampleprojects.dependencyinjection;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
-import md.com.sampleprojects.MainActivity;
 import md.com.sampleprojects.fragments.DaggerFragment;
 
 @Singleton
