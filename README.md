@@ -9,5 +9,5 @@ FEATURES:
     
     3) Recycler View Sample
     
-    4) Dagger 2(Depedency Injection)/MVP Sample
+    4) Dagger 2(Depedency Injection) Sample
     
